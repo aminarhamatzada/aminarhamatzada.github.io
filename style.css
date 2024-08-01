@@ -335,3 +335,21 @@ a {
     }
 
 }
+
+/* animations */ 
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100px); /* Elements will slide in from the left */
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
