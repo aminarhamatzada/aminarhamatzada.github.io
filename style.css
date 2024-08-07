@@ -336,12 +336,16 @@ a {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* animations */ 
 
-/* .hidden {
+ .hidden {
     opacity: 0;
-    transform: translateX(-100px); /* Elements will slide in from the left */
-/* }
+    transform: translateX(-100px); /* slide from left */
+}
 
 .fade-in {
     animation: fadeIn 1s forwards;
@@ -352,4 +356,4 @@ a {
         opacity: 1;
         transform: translateX(0);
     }
-} */
+} 
