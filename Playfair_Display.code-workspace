@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Playfair_Display",
+			"path": "../Playfair_Display"
+		},
+		{
+			"name": "website",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

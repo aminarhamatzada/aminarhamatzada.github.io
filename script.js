@@ -1,29 +1,41 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Elements to animate
-    const elementsToAnimate = [
-        document.querySelector('.pic'),
-        document.querySelector('.about'),
-        document.querySelector('.contact-section'),
+    // Typewriter intro
+    const typeEl = document.getElementById("typewriter-text");
+    const messages = [
+        "Hi, I'm Amina!",
+        "I study Computer Science and Applied Math at Stony Brook University.",
+        "I build with security, design, and engineering in mind.",
+        "I am actively seeking full-time roles after graduating this Spring."
     ];
+    let msgIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
 
-    // Add hidden class initially
-    elementsToAnimate.forEach(element => {
-        element.classList.add('hidden');
-    });
+    const typeSpeed = 60;
+    const pauseTime = 1400;
 
-    // Function to add fade-in class after a delay
-    const animateElements = (elements, delay) => {
-        elements.forEach((element, index) => {
-            setTimeout(() => {
-                element.classList.add('fade-in');
-            }, index * delay);
-        });
-    };
+    function type() {
+        if (!typeEl) return;
+        const current = messages[msgIndex];
+        if (!deleting) {
+            typeEl.textContent = current.slice(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === current.length) {
+                deleting = true;
+                setTimeout(type, pauseTime);
+                return;
+            }
+        } else {
+            typeEl.textContent = current.slice(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                deleting = false;
+                msgIndex = (msgIndex + 1) % messages.length;
+            }
+        }
+        setTimeout(type, deleting ? 35 : typeSpeed);
+    }
 
-    // Trigger animations with different delays
-    animateElements([document.querySelector('.pic')], 200);
-    animateElements([document.querySelector('.about')], 300);
-    animateElements([document.querySelector('.contact-section')], 400);
-   
+    type();
 });
