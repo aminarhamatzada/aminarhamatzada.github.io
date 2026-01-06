@@ -19,8 +19,10 @@
             <li><a href="#about">About</a></li>
             <li><a href="#technologies">Technologies</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">☾</button>
     </nav>
 
     <!-- Hero -->
@@ -37,7 +39,7 @@
         <p class="about" id="about">
             Hi! My name is Amina and I am a junior at Stony Brook University with a double major in Computer Science and Applied Math and Statistics.
             I am driven by creativity and curiosity with a love for learning, and always eager to expand my skills.
-            I am actively seeking summer 2025 internships to apply my abilities and gain new experiences. Thanks for visiting my site!
+            I am actively seeking seeking full-time roles after graduating this Spring to apply my abilities and gain new experiences. Thanks for visiting my site!
             Feel free to reach out if you'd like to connect or have opportunities to share.
         </p>
     </div>
@@ -46,75 +48,39 @@
     <div class="technologies" id="technologies">
         <p>Technologies</p>
         <div class="technologies-grid">
-            <div class="technology-item">
-                <img src="icons/java-14.png" alt="Java">
-                <span>Java</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/html.png" alt="HTML">
-                <span>HTML</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/css-29.png" alt="CSS">
-                <span>CSS</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/python-5.png" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/c-17.png" alt="C">
-                <span>C</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/photoshop-85.png" alt="Photoshop">
-                <span>Photoshop</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/figma-1.png" alt="Figma">
-                <span>Figma</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/javascript-1.png" alt="JavaScript">
-                <span>JavaScript</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/adobe-19.png" alt="Adobe">
-                <span>Adobe</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/palette.png" alt="canva">
-                <span>Canva</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/ocaml.png" alt="OCaml">
-                <span>OCaml</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/r.png" alt="r">
-                <span>R</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/sql.png" alt="sql">
-                <span>SQL</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/swift-1.png" alt="Swift">
-                <span>Swift</span>
-            </div>
-            <div class="technology-item">
-                <img src="icons/github-41.png" alt="GitHub">
-                <span>GitHub</span>
-            </div>
+            <div class="technology-item"><img src="icons/java-14.png" alt="Java"><span>Java</span></div>
+            <div class="technology-item"><img src="icons/html.png" alt="HTML"><span>HTML</span></div>
+            <div class="technology-item"><img src="icons/css-29.png" alt="CSS"><span>CSS</span></div>
+            <div class="technology-item"><img src="icons/python-5.png" alt="Python"><span>Python</span></div>
+            <div class="technology-item"><img src="icons/c-17.png" alt="C"><span>C</span></div>
+            <div class="technology-item"><img src="icons/photoshop-85.png" alt="Photoshop"><span>Photoshop</span></div>
+            <div class="technology-item"><img src="icons/figma-1.png" alt="Figma"><span>Figma</span></div>
+            <div class="technology-item"><img src="icons/javascript-1.png" alt="JavaScript"><span>JavaScript</span></div>
+            <div class="technology-item"><img src="icons/adobe-19.png" alt="Adobe"><span>Adobe</span></div>
+            <div class="technology-item"><img src="icons/palette.png" alt="canva"><span>Canva</span></div>
+            <div class="technology-item"><img src="icons/ocaml.png" alt="OCaml"><span>OCaml</span></div>
+            <div class="technology-item"><img src="icons/r.png" alt="r"><span>R</span></div>
+            <div class="technology-item"><img src="icons/sql.png" alt="sql"><span>SQL</span></div>
+            <div class="technology-item"><img src="icons/swift-1.png" alt="Swift"><span>Swift</span></div>
+            <div class="technology-item"><img src="icons/github-41.png" alt="GitHub"><span>GitHub</span></div>
         </div>
     </div>
 
     <!-- Experience -->
     <section id="experience" class="experience-section section">
         <h2 class="section-title center">Experience</h2>
+        <div class="experience-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Security">Security</button>
+            <button class="filter-btn" data-filter="Teaching">Teaching</button>
+            <button class="filter-btn" data-filter="Design Ops">Design Ops</button>
+            <button class="filter-btn" data-filter="Community">Community</button>
+            <button class="filter-btn" data-filter="Ops">Ops</button>
+            <button class="filter-btn" data-filter="Learning">Learning</button>
+        </div>
         <div class="experience-list">
 
-            <article class="experience-block tiktok">
+            <article class="experience-block tiktok" data-category="Security">
                 <div class="experience-top">
                     <div class="badge">Security</div>
                     <div class="meta">
@@ -126,15 +92,16 @@
                     <div class="stripe"></div>
                     <div>
                         <p>Designed internal and external security advocacy campaigns for the Security Advocacy and Culture team, and gathered stories across Global Security to advance security culture.</p>
-                        <ul>
+                        <ul class="details">
                             <li>Built campaigns that connected education, awareness, and cultural impact.</li>
                             <li>Partnered with teams to surface narratives that resonate with the next wave of technologists.</li>
                         </ul>
+                        <button class="expand-btn" aria-expanded="false">Read more</button>
                     </div>
                 </div>
             </article>
 
-            <article class="experience-block coach">
+            <article class="experience-block coach" data-category="Teaching">
                 <div class="experience-top">
                     <div class="badge">Teaching</div>
                     <div class="meta">
@@ -146,15 +113,16 @@
                     <div class="stripe"></div>
                     <div>
                         <p>Taught ages 5–18 in Java, Python, and Scratch, running classes from one-on-one to 15 students.</p>
-                        <ul>
+                        <ul class="details">
                             <li>Adapted lesson plans to different levels and learning speeds.</li>
                             <li>Kept parents informed and students excited to keep building.</li>
                         </ul>
+                        <button class="expand-btn" aria-expanded="false">Read more</button>
                     </div>
                 </div>
             </article>
 
-            <article class="experience-block pch">
+            <article class="experience-block pch" data-category="Design Ops">
                 <div class="experience-top">
                     <div class="badge">Design Ops</div>
                     <div class="meta">
@@ -166,15 +134,16 @@
                     <div class="stripe"></div>
                     <div>
                         <p>Collaborated with graphic, UX/UI, and web teams on email creative using Figma and Photoshop.</p>
-                        <ul>
+                        <ul class="details">
                             <li>Balanced visual polish with clear messaging for campaigns.</li>
                             <li>Coordinated feedback across designers and developers.</li>
                         </ul>
+                        <button class="expand-btn" aria-expanded="false">Read more</button>
                     </div>
                 </div>
             </article>
 
-            <article class="experience-block kwk-intern">
+            <article class="experience-block kwk-intern" data-category="Community">
                 <div class="experience-top">
                     <div class="badge">Community</div>
                     <div class="meta">
@@ -186,15 +155,16 @@
                     <div class="stripe"></div>
                     <div>
                         <p>Community ambassador on Geneva and member of the creator team producing weekly social content.</p>
-                        <ul>
+                        <ul class="details">
                             <li>Supported learners with guidance and resources.</li>
                             <li>Represented the program at events, including a Today Show segment.</li>
                         </ul>
+                        <button class="expand-btn" aria-expanded="false">Read more</button>
                     </div>
                 </div>
             </article>
 
-            <article class="experience-block barista">
+            <article class="experience-block barista" data-category="Ops">
                 <div class="experience-top">
                     <div class="badge">Ops</div>
                     <div class="meta">
@@ -206,15 +176,16 @@
                     <div class="stripe"></div>
                     <div>
                         <p>Customer-facing role in a fast-paced shop, serving drinks and supporting branding efforts.</p>
-                        <ul>
+                        <ul class="details">
                             <li>Refined multitasking and service under pressure.</li>
                             <li>Shot event photos to support the small business brand.</li>
                         </ul>
+                        <button class="expand-btn" aria-expanded="false">Read more</button>
                     </div>
                 </div>
             </article>
 
-            <article class="experience-block kwk-student">
+            <article class="experience-block kwk-student" data-category="Learning">
                 <div class="experience-top">
                     <div class="badge">Learning</div>
                     <div class="meta">
@@ -226,14 +197,54 @@
                     <div class="stripe"></div>
                     <div>
                         <p>Completed camps in 2019 and 2020 focused on web and app development projects.</p>
-                        <ul>
+                        <ul class="details">
                             <li>Collaborated on group builds for showcase presentations.</li>
                             <li>Foundational work that led to coaching and design roles.</li>
                         </ul>
+                        <button class="expand-btn" aria-expanded="false">Read more</button>
                     </div>
                 </div>
             </article>
 
+        </div>
+    </section>
+
+    <!-- Projects & Demos -->
+    <section id="projects" class="projects section">
+        <h2 class="section-title center">Projects & Demos</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-top">
+                    <p class="project-name">PLM Image Analysis Pipeline</p>
+                    <span class="project-tag">ImageJ / Fiji</span>
+                </div>
+                <p class="project-desc">Automated polarized light microscopy (PLM) gel analysis via ImageJ/Fiji macros; outputs particle size/shape distributions and crystal counts to CSV for comparisons.</p>
+                <div class="project-actions">
+                    <button class="demo-btn" disabled>Demo coming soon</button>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-top">
+                    <p class="project-name">Network Sniffer</p>
+                    <span class="project-tag">Python · Scapy</span>
+                </div>
+                <p class="project-desc">Live packet sniffer capturing and parsing HTTP, DNS, and TLS traffic from interfaces or PCAPs to aid real-time analysis and debugging.</p>
+                <div class="project-actions">
+                    <button class="demo-btn" disabled>Demo coming soon</button>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-top">
+                    <p class="project-name">Personal Website</p>
+                    <span class="project-tag">Web</span>
+                </div>
+                <p class="project-desc">Designed, developed, and deployed this responsive site with HTML, CSS, and vanilla JS as a central hub for projects and experience.</p>
+                <div class="project-actions">
+                    <a class="demo-btn" href="#home">View here</a>
+                </div>
+            </article>
         </div>
     </section>
 
