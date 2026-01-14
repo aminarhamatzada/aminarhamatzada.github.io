@@ -220,7 +220,7 @@
                 </div>
                 <p class="project-desc">Automated polarized light microscopy (PLM) gel analysis via ImageJ/Fiji macros; outputs particle size/shape distributions and crystal counts to CSV for comparisons.</p>
                 <div class="project-actions">
-                    <button class="demo-btn" disabled>Demo coming soon</button>
+                    <button class="demo-btn demo-trigger" data-demo="plm">View demo</button>
                 </div>
             </article>
 
@@ -231,7 +231,7 @@
                 </div>
                 <p class="project-desc">Live packet sniffer capturing and parsing HTTP, DNS, and TLS traffic from interfaces or PCAPs to aid real-time analysis and debugging.</p>
                 <div class="project-actions">
-                    <button class="demo-btn" disabled>Demo coming soon</button>
+                    <button class="demo-btn demo-trigger" data-demo="sniffer">View demo</button>
                 </div>
             </article>
 
@@ -247,6 +247,43 @@
             </article>
         </div>
     </section>
+
+    <!-- Demo Modal -->
+    <div class="modal" id="demo-modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close demo">×</button>
+            <div class="modal-header">
+                <div>
+                    <p class="modal-overline" id="demo-tag"></p>
+                    <h3 id="demo-title"></h3>
+                    <p class="modal-sub" id="demo-sub"></p>
+                </div>
+                <div class="modal-actions">
+                    <a id="demo-github" class="demo-btn" target="_blank" rel="noreferrer">View code</a>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-columns">
+                    <div>
+                        <p class="modal-label">How it works</p>
+                        <p id="demo-how"></p>
+                        <p class="modal-label">Try it</p>
+                        <p id="demo-try"></p>
+                        <form class="upload-form">
+                            <label for="pcap-upload">Upload a PCAP to parse</label>
+                            <input type="file" id="pcap-upload" accept=".pcap,.pcapng">
+                            <button type="button" id="upload-btn" class="demo-btn">Upload & Parse</button>
+                            <p id="upload-status" class="upload-status"></p>
+                        </form>
+                    </div>
+                    <div class="log-pane">
+                        <p class="modal-label">Sample output</p>
+                        <pre id="demo-log"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact -->
     <section class="contact-wrap section" id="contact">
